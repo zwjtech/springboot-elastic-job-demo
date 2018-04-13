@@ -1,0 +1,2 @@
+# SpringBootIntegrateDubbo
+springBoot 整合Dubbo，基于yml文件，和zookeeper集群，单服务调用者和两个服务提供者的简单demo
