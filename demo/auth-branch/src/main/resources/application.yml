@@ -21,6 +21,12 @@ spring:
       port: 20881
       status : server
 #调用dubbo组建扫描的项目路径
-    scan: com.demo.branch.impl
+    scan: com.demo.branch.imp  com.mysql.jdbc.Driver
+event:
+  rdb:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/esjob?useUnicode=true&characterEncoding=UTF-8&useSSL=false&transformedBitIsBoolean=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
 
 

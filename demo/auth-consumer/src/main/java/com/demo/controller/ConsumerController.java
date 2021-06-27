@@ -14,7 +14,7 @@ public class ConsumerController {
 	static final String masterUrl = "dubbo://127.0.0.1:20880";
 	
 	
-	@Reference(url = branchUrl)
+	@Reference(url = branchUrl,timeout = 5000, generic = false, init = false)
 	BranchService branchService;
 	
 	@Reference(url = masterUrl)
