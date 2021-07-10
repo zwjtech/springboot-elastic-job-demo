@@ -63,5 +63,11 @@
             <property name="useActualColumnNames" value="false"/>
         </table>
 
+        <table tableName="orm_user" domainObjectName="OrmUser"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false" >
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+
     </context>
 </generatorConfiguration>

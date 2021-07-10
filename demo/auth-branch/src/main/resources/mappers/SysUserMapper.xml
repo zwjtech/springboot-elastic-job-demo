@@ -49,170 +49,170 @@
       #{authSalt,jdbcType=VARCHAR}, #{lastLoginIp,jdbcType=VARCHAR}, #{lastLoginTime,jdbcType=TIMESTAMP}, 
       #{isDelete,jdbcType=INTEGER}, #{registTime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.demo.entity.SysUser" >
+  <insert id="insertSelective" parameterType="com.demo.entity.SysUser">
     insert into sys_user
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         id,
       </if>
-      <if test="username != null" >
+      <if test="username != null">
         username,
       </if>
-      <if test="password != null" >
+      <if test="password != null">
         password,
       </if>
-      <if test="nickname != null" >
+      <if test="nickname != null">
         nickname,
       </if>
-      <if test="age != null" >
+      <if test="age != null">
         age,
       </if>
-      <if test="sex != null" >
+      <if test="sex != null">
         sex,
       </if>
-      <if test="job != null" >
+      <if test="job != null">
         job,
       </if>
-      <if test="faceImage != null" >
+      <if test="faceImage != null">
         face_image,
       </if>
-      <if test="province != null" >
+      <if test="province != null">
         province,
       </if>
-      <if test="city != null" >
+      <if test="city != null">
         city,
       </if>
-      <if test="district != null" >
+      <if test="district != null">
         district,
       </if>
-      <if test="address != null" >
+      <if test="address != null">
         address,
       </if>
-      <if test="authSalt != null" >
+      <if test="authSalt != null">
         auth_salt,
       </if>
-      <if test="lastLoginIp != null" >
+      <if test="lastLoginIp != null">
         last_login_ip,
       </if>
-      <if test="lastLoginTime != null" >
+      <if test="lastLoginTime != null">
         last_login_time,
       </if>
-      <if test="isDelete != null" >
+      <if test="isDelete != null">
         is_delete,
       </if>
-      <if test="registTime != null" >
+      <if test="registTime != null">
         regist_time,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="username != null" >
+      <if test="username != null">
         #{username,jdbcType=VARCHAR},
       </if>
-      <if test="password != null" >
+      <if test="password != null">
         #{password,jdbcType=VARCHAR},
       </if>
-      <if test="nickname != null" >
+      <if test="nickname != null">
         #{nickname,jdbcType=VARCHAR},
       </if>
-      <if test="age != null" >
+      <if test="age != null">
         #{age,jdbcType=INTEGER},
       </if>
-      <if test="sex != null" >
+      <if test="sex != null">
         #{sex,jdbcType=INTEGER},
       </if>
-      <if test="job != null" >
+      <if test="job != null">
         #{job,jdbcType=INTEGER},
       </if>
-      <if test="faceImage != null" >
+      <if test="faceImage != null">
         #{faceImage,jdbcType=VARCHAR},
       </if>
-      <if test="province != null" >
+      <if test="province != null">
         #{province,jdbcType=VARCHAR},
       </if>
-      <if test="city != null" >
+      <if test="city != null">
         #{city,jdbcType=VARCHAR},
       </if>
-      <if test="district != null" >
+      <if test="district != null">
         #{district,jdbcType=VARCHAR},
       </if>
-      <if test="address != null" >
+      <if test="address != null">
         #{address,jdbcType=VARCHAR},
       </if>
-      <if test="authSalt != null" >
+      <if test="authSalt != null">
         #{authSalt,jdbcType=VARCHAR},
       </if>
-      <if test="lastLoginIp != null" >
+      <if test="lastLoginIp != null">
         #{lastLoginIp,jdbcType=VARCHAR},
       </if>
-      <if test="lastLoginTime != null" >
+      <if test="lastLoginTime != null">
         #{lastLoginTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="isDelete != null" >
+      <if test="isDelete != null">
         #{isDelete,jdbcType=INTEGER},
       </if>
-      <if test="registTime != null" >
+      <if test="registTime != null">
         #{registTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.demo.entity.SysUser" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.demo.entity.SysUser">
     update sys_user
-    <set >
-      <if test="username != null" >
+    <set>
+      <if test="username != null">
         username = #{username,jdbcType=VARCHAR},
       </if>
-      <if test="password != null" >
+      <if test="password != null">
         password = #{password,jdbcType=VARCHAR},
       </if>
-      <if test="nickname != null" >
+      <if test="nickname != null">
         nickname = #{nickname,jdbcType=VARCHAR},
       </if>
-      <if test="age != null" >
+      <if test="age != null">
         age = #{age,jdbcType=INTEGER},
       </if>
-      <if test="sex != null" >
+      <if test="sex != null">
         sex = #{sex,jdbcType=INTEGER},
       </if>
-      <if test="job != null" >
+      <if test="job != null">
         job = #{job,jdbcType=INTEGER},
       </if>
-      <if test="faceImage != null" >
+      <if test="faceImage != null">
         face_image = #{faceImage,jdbcType=VARCHAR},
       </if>
-      <if test="province != null" >
+      <if test="province != null">
         province = #{province,jdbcType=VARCHAR},
       </if>
-      <if test="city != null" >
+      <if test="city != null">
         city = #{city,jdbcType=VARCHAR},
       </if>
-      <if test="district != null" >
+      <if test="district != null">
         district = #{district,jdbcType=VARCHAR},
       </if>
-      <if test="address != null" >
+      <if test="address != null">
         address = #{address,jdbcType=VARCHAR},
       </if>
-      <if test="authSalt != null" >
+      <if test="authSalt != null">
         auth_salt = #{authSalt,jdbcType=VARCHAR},
       </if>
-      <if test="lastLoginIp != null" >
+      <if test="lastLoginIp != null">
         last_login_ip = #{lastLoginIp,jdbcType=VARCHAR},
       </if>
-      <if test="lastLoginTime != null" >
+      <if test="lastLoginTime != null">
         last_login_time = #{lastLoginTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="isDelete != null" >
+      <if test="isDelete != null">
         is_delete = #{isDelete,jdbcType=INTEGER},
       </if>
-      <if test="registTime != null" >
+      <if test="registTime != null">
         regist_time = #{registTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.demo.entity.SysUser" >
+  <update id="updateByPrimaryKey" parameterType="com.demo.entity.SysUser">
     update sys_user
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},

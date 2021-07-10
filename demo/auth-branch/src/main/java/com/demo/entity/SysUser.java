@@ -2,6 +2,7 @@ package com.demo.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+
 public class SysUser implements Serializable {
     private Long id;
 
@@ -37,6 +38,8 @@ public class SysUser implements Serializable {
 
     private Date registTime;
 
+    private static final long serialVersionUID = 1L;
+
     public Long getId() {
         return id;
     }
@@ -50,7 +53,7 @@ public class SysUser implements Serializable {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.username = username == null ? null : username.trim();
     }
 
     public String getPassword() {
@@ -58,7 +61,7 @@ public class SysUser implements Serializable {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password == null ? null : password.trim();
     }
 
     public String getNickname() {
@@ -66,7 +69,7 @@ public class SysUser implements Serializable {
     }
 
     public void setNickname(String nickname) {
-        this.nickname = nickname;
+        this.nickname = nickname == null ? null : nickname.trim();
     }
 
     public Integer getAge() {
@@ -98,7 +101,7 @@ public class SysUser implements Serializable {
     }
 
     public void setFaceImage(String faceImage) {
-        this.faceImage = faceImage;
+        this.faceImage = faceImage == null ? null : faceImage.trim();
     }
 
     public String getProvince() {
@@ -106,7 +109,7 @@ public class SysUser implements Serializable {
     }
 
     public void setProvince(String province) {
-        this.province = province;
+        this.province = province == null ? null : province.trim();
     }
 
     public String getCity() {
@@ -114,7 +117,7 @@ public class SysUser implements Serializable {
     }
 
     public void setCity(String city) {
-        this.city = city;
+        this.city = city == null ? null : city.trim();
     }
 
     public String getDistrict() {
@@ -122,7 +125,7 @@ public class SysUser implements Serializable {
     }
 
     public void setDistrict(String district) {
-        this.district = district;
+        this.district = district == null ? null : district.trim();
     }
 
     public String getAddress() {
@@ -130,7 +133,7 @@ public class SysUser implements Serializable {
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.address = address == null ? null : address.trim();
     }
 
     public String getAuthSalt() {
@@ -138,7 +141,7 @@ public class SysUser implements Serializable {
     }
 
     public void setAuthSalt(String authSalt) {
-        this.authSalt = authSalt;
+        this.authSalt = authSalt == null ? null : authSalt.trim();
     }
 
     public String getLastLoginIp() {
@@ -146,7 +149,7 @@ public class SysUser implements Serializable {
     }
 
     public void setLastLoginIp(String lastLoginIp) {
-        this.lastLoginIp = lastLoginIp;
+        this.lastLoginIp = lastLoginIp == null ? null : lastLoginIp.trim();
     }
 
     public Date getLastLoginTime() {
@@ -171,28 +174,5 @@ public class SysUser implements Serializable {
 
     public void setRegistTime(Date registTime) {
         this.registTime = registTime;
-    }
-
-    @Override
-    public String toString() {
-        return "SysUser{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", nickname='" + nickname + '\'' +
-                ", age=" + age +
-                ", sex=" + sex +
-                ", job=" + job +
-                ", faceImage='" + faceImage + '\'' +
-                ", province='" + province + '\'' +
-                ", city='" + city + '\'' +
-                ", district='" + district + '\'' +
-                ", address='" + address + '\'' +
-                ", authSalt='" + authSalt + '\'' +
-                ", lastLoginIp='" + lastLoginIp + '\'' +
-                ", lastLoginTime=" + lastLoginTime +
-                ", isDelete=" + isDelete +
-                ", registTime=" + registTime +
-                '}';
     }
 }
