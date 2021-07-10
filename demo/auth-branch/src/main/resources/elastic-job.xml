@@ -18,21 +18,32 @@
     <!-- 配置作业 Bean -->
     <bean id="myJob" class="com.demo.job.MyElasticSimpleJob">
     </bean>
-    <bean id="tracingDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init"  destroy-method="close">
-        <!--<property name="driverClassName" value="${event.rdb.driver}"/>-->
-        <property name="url" value="${event.rdb.url}"/>
-        <property name="username" value="${event.rdb.username}"/>
-        <property name="password" value="${event.rdb.password}"/>
-    </bean>
+<!--    <bean id="tracingDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init"  destroy-method="close">-->
+<!--        &lt;!&ndash;<property name="driverClassName" value="${event.rdb.driver}"/>&ndash;&gt;-->
+<!--        <property name="url" value="${event.rdb.url}"/>-->
+<!--        <property name="username" value="${event.rdb.username}"/>-->
+<!--        <property name="password" value="${event.rdb.password}"/>-->
+<!--    </bean>-->
 
-    <elasticjob:rdb-tracing id="elasticJobTrace" data-source-ref="tracingDataSource"/>
+<!--    <elasticjob:rdb-tracing id="elasticJobTrace" data-source-ref="tracingDataSource"/>-->
     <!-- 配置基于 class 的作业调度 -->
-    <elasticjob:job id="1233333" job-ref="myJob" registry-center-ref="regCenter"
-                    sharding-total-count="3" cron="0/1 * * * * ?"
-                    overwrite="true"
-                    sharding-item-parameters="0=北京,1=上海,2=深圳"
-                    tracing-ref="elasticJobTrace"
-    />
+<!--    <elasticjob:job id="1233333" job-ref="myJob" registry-center-ref="regCenter"-->
+<!--                    sharding-total-count="3" cron="0/1 * * * * ?"-->
+<!--                    overwrite="true"-->
+<!--                    sharding-item-parameters="0=北京,1=上海,2=深圳"-->
+<!--                    tracing-ref="elasticJobTrace"-->
+<!--    />-->
+
+<!--    <elasticjob:job id="1233333" job-ref="myJob" registry-center-ref="regCenter"-->
+<!--                    sharding-total-count="3" cron="0/1 * * * * ?"-->
+<!--                    overwrite="true"-->
+<!--                    sharding-item-parameters="0=北京,1=上海,2=深圳"-->
+<!--    />-->
+
+       <elasticjob:job id="uqiwyeqiuwe" job-ref="myJob"  registry-center-ref="regCenter"  sharding-total-count="3" cron="0/1 * * * * ?"
+                       overwrite="true"
+                       sharding-item-parameters="0=北京,1=上海,2=深圳"
+       />
 
 
 

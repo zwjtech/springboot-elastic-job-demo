@@ -3,6 +3,27 @@ server:
   port: 8100
 #应用名称
 spring:
+  profiles:
+    active: dev
+  application:
+    name: test-app
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mybatis-test-data?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    initialization-mode: always
+    continue-on-error: true
+    hikari:
+      minimum-idle: 5
+      connection-test-query: SELECT 1 FROM DUAL
+      maximum-pool-size: 20
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: SpringBootDemoHikariCP
+      max-lifetime: 60000
+      connection-timeout: 30000
   dubbo: 
     application:
 #注册在注册中心的名称，唯一标识，请勿重复
@@ -22,11 +43,10 @@ spring:
       status : server
 #调用dubbo组建扫描的项目路径
     scan: com.demo.branch.imp  com.mysql.jdbc.Driver
-event:
-  rdb:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/esjob?useUnicode=true&characterEncoding=UTF-8&useSSL=false&transformedBitIsBoolean=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai
-    username: root
-    password: root
+mybatis:
+  mapper-locations: classpath*:mappers/*.xml
+  type-aliases-package: com.demo.entity
+
+
 
 
